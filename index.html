@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prof. Mohammad Abdul Malik | Professor of Economics</title>
+<meta name="description" content="Academic portfolio of Prof. Mohammad Abdul Malik, Professor of Economics at Government Degree College, Chevella, Telangana. 24 years of experience, 63 publications, 27 books." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0d1b2a;
+    --charcoal: #1a2533;
+    --slate: #2c3e50;
+    --gold: #b8972e;
+    --gold-light: #d4a843;
+    --gold-pale: #f0e0a0;
+    --cream: #f8f5ef;
+    --white: #ffffff;
+    --text-muted: #8a9bb0;
+    --border: rgba(184,151,46,0.2);
+    --card-bg: rgba(255,255,255,0.04);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--navy);
+    color: var(--cream);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.2rem 4rem;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(13,27,42,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: padding 0.3s;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 500; letter-spacing: 0.05em;
+    color: var(--gold-light);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none; font-weight: 400;
+    transition: color 0.25s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 1px; background: var(--cream); display: block; transition: 0.3s; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    padding: 8rem 4rem 4rem;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 20% 60%, rgba(184,151,46,0.08) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 20%, rgba(44,62,80,0.4) 0%, transparent 50%),
+                linear-gradient(160deg, #0d1b2a 0%, #111e2d 50%, #0a1520 100%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: linear-gradient(var(--gold) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--gold) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .particle {
+    position: absolute; border-radius: 50%;
+    background: var(--gold);
+    animation: float linear infinite;
+    opacity: 0;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 0.4; }
+    90% { opacity: 0.1; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 800px; }
+  .hero-eyebrow {
+    font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
+    opacity: 0; animation: fadeUp 0.8s 0.3s forwards;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 40px; height: 1px; background: var(--gold);
+  }
+  h1.hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 300; line-height: 1.05; letter-spacing: -0.01em;
+    color: var(--white); margin-bottom: 0.5rem;
+    opacity: 0; animation: fadeUp 0.9s 0.5s forwards;
+  }
+  h1.hero-name em { font-style: italic; color: var(--gold-light); }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 300; color: var(--text-muted);
+    margin-bottom: 0.8rem;
+    opacity: 0; animation: fadeUp 0.9s 0.65s forwards;
+  }
+  .hero-tagline {
+    font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 2.5rem;
+    opacity: 0; animation: fadeUp 0.9s 0.8s forwards;
+  }
+  .hero-tagline span { margin: 0 0.5rem; opacity: 0.4; }
+  .hero-divider {
+    width: 80px; height: 1px; background: linear-gradient(to right, var(--gold), transparent);
+    margin-bottom: 2rem;
+    opacity: 0; animation: fadeUp 0.9s 0.9s forwards;
+  }
+  .hero-desc {
+    font-size: 1rem; color: var(--text-muted); max-width: 540px;
+    margin-bottom: 3rem; font-weight: 300; line-height: 1.8;
+    opacity: 0; animation: fadeUp 0.9s 1s forwards;
+  }
+  .hero-ctas {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.9s 1.1s forwards;
+  }
+  .btn-primary {
+    padding: 0.85rem 2.2rem;
+    background: var(--gold); color: var(--navy);
+    font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500;
+    border: none; cursor: pointer; text-decoration: none;
+    transition: background 0.25s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    padding: 0.85rem 2.2rem;
+    background: transparent; color: var(--cream);
+    font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 400;
+    border: 1px solid rgba(248,245,239,0.25); cursor: pointer; text-decoration: none;
+    transition: border-color 0.25s, color 0.25s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .hero-stats {
+    position: absolute; right: 4rem; bottom: 6rem; z-index: 2;
+    display: flex; flex-direction: column; gap: 2rem; text-align: right;
+    opacity: 0; animation: fadeLeft 1s 1.3s forwards;
+  }
+  .stat-item { }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300; color: var(--gold-light);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .scroll-indicator {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    color: var(--text-muted); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+    opacity: 0; animation: fadeUp 1s 1.5s forwards;
+  }
+  .scroll-line {
+    width: 1px; height: 50px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 7rem 4rem; position: relative; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-label::after { content: ''; flex: 1; max-width: 60px; height: 1px; background: var(--gold); opacity: 0.5; }
+  h2.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 300; color: var(--white); margin-bottom: 1rem;
+  }
+  .section-sub {
+    font-size: 0.95rem; color: var(--text-muted); max-width: 600px; margin-bottom: 4rem;
+  }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s, transform 0.7s; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+
+  /* ── ABOUT ── */
+  #about { background: linear-gradient(180deg, var(--navy) 0%, #0f1e2f 100%); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+  }
+  .about-text p { color: var(--text-muted); font-size: 1rem; line-height: 1.9; margin-bottom: 1.5rem; }
+  .about-text p:first-of-type {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400;
+    color: var(--cream); font-style: italic; line-height: 1.7;
+  }
+  .qual-grid { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+  .qual-item {
+    display: flex; align-items: flex-start; gap: 1rem; padding: 1.2rem 1.5rem;
+    border: 1px solid var(--border); background: var(--card-bg);
+    transition: border-color 0.25s, background 0.25s;
+  }
+  .qual-item:hover { border-color: rgba(184,151,46,0.4); background: rgba(184,151,46,0.04); }
+  .qual-icon { color: var(--gold); font-size: 1.1rem; margin-top: 0.1rem; flex-shrink: 0; }
+  .qual-title { font-size: 0.95rem; font-weight: 400; color: var(--cream); }
+  .qual-detail { font-size: 0.8rem; color: var(--text-muted); }
+  .exp-counter {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;
+  }
+  .counter-card {
+    padding: 2rem 1.5rem; border: 1px solid var(--border);
+    background: var(--card-bg); text-align: center;
+  }
+  .counter-num {
+    font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300;
+    color: var(--gold-light); line-height: 1; display: block;
+  }
+  .counter-desc { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.4rem; }
+
+  /* ── EXPERIENCE TIMELINE ── */
+  #experience { background: #0a1520; }
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 1px; background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+  .timeline-item { position: relative; padding: 0 0 3rem 2.5rem; }
+  .timeline-item::before {
+    content: ''; position: absolute; left: -0.35rem; top: 0.3rem;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gold); border: 2px solid var(--navy);
+    box-shadow: 0 0 0 3px rgba(184,151,46,0.2);
+  }
+  .timeline-year {
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.4rem;
+  }
+  .timeline-role {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400;
+    color: var(--white); margin-bottom: 0.3rem;
+  }
+  .timeline-org { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem; }
+  .timeline-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* ── RESEARCH ── */
+  #research { background: linear-gradient(180deg, #0a1520 0%, var(--navy) 100%); }
+  .stats-row {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 5rem;
+  }
+  .stat-card {
+    padding: 2.5rem 2rem; border: 1px solid var(--border); background: var(--card-bg);
+    text-align: center; position: relative; overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .stat-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px; background: linear-gradient(to right, transparent, var(--gold), transparent);
+    transform: scaleX(0); transition: transform 0.3s;
+  }
+  .stat-card:hover { border-color: rgba(184,151,46,0.4); transform: translateY(-4px); }
+  .stat-card:hover::after { transform: scaleX(1); }
+  .stat-card .big-num {
+    font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; font-weight: 300;
+    color: var(--gold-light); line-height: 1; display: block;
+  }
+  .stat-card .stat-label {
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted); margin-top: 0.5rem; display: block;
+  }
+  .papers-list { display: flex; flex-direction: column; gap: 1px; }
+  .paper-item {
+    padding: 1.4rem 1.8rem; background: var(--card-bg); border: 1px solid var(--border);
+    cursor: pointer; transition: background 0.25s, border-color 0.25s;
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
+  }
+  .paper-item:hover { background: rgba(184,151,46,0.06); border-color: rgba(184,151,46,0.35); }
+  .paper-title { font-size: 0.92rem; color: var(--cream); font-weight: 400; flex: 1; line-height: 1.5; }
+  .paper-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; flex-shrink: 0; }
+  .paper-year { font-size: 0.72rem; color: var(--gold); letter-spacing: 0.1em; }
+  .paper-link {
+    font-size: 0.68rem; letter-spacing: 0.1em; color: var(--text-muted); text-decoration: none;
+    text-transform: uppercase; border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .paper-link:hover { color: var(--gold); border-color: var(--gold); }
+
+  /* ── BOOKS ── */
+  #books { background: #0a1520; }
+  .books-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1px;
+    background: var(--border);
+  }
+  .book-card {
+    padding: 1.8rem 1.5rem; background: var(--navy);
+    transition: background 0.25s, transform 0.25s;
+    position: relative;
+  }
+  .book-card:hover { background: var(--charcoal); transform: translateY(-4px); z-index: 1; }
+  .book-num {
+    font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300;
+    color: var(--border); line-height: 1; margin-bottom: 0.8rem;
+  }
+  .book-title { font-size: 0.88rem; color: var(--cream); line-height: 1.5; font-weight: 400; margin-bottom: 0.5rem; }
+  .book-pub { font-size: 0.72rem; color: var(--text-muted); }
+  .book-year { font-size: 0.68rem; color: var(--gold); margin-top: 0.5rem; }
+
+  /* ── AWARDS ── */
+  #awards { background: var(--navy); }
+  .award-display {
+    display: flex; align-items: center; gap: 4rem;
+    padding: 4rem; border: 1px solid var(--border);
+    background: radial-gradient(ellipse at top left, rgba(184,151,46,0.08), transparent 60%);
+    position: relative; overflow: hidden;
+  }
+  .award-display::before {
+    content: '★'; position: absolute; right: 3rem; top: 50%; transform: translateY(-50%);
+    font-size: 8rem; color: rgba(184,151,46,0.06); line-height: 1;
+  }
+  .award-icon {
+    width: 80px; height: 80px; border: 1px solid var(--gold); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem; color: var(--gold); flex-shrink: 0;
+  }
+  .award-body h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400;
+    color: var(--white); margin-bottom: 0.4rem;
+  }
+  .award-body p { color: var(--text-muted); font-size: 0.92rem; }
+  .award-year { font-size: 0.72rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; }
+
+  /* ── SOCIAL ── */
+  #social { background: linear-gradient(180deg, var(--navy) 0%, #0a1520 100%); }
+  .social-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+  .social-card {
+    padding: 2.5rem 2rem; border: 1px solid var(--border);
+    background: var(--card-bg); transition: border-color 0.3s, transform 0.3s;
+  }
+  .social-card:hover { border-color: rgba(184,151,46,0.4); transform: translateY(-4px); }
+  .social-role {
+    font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.8rem;
+  }
+  .social-org {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400;
+    color: var(--white); line-height: 1.3;
+  }
+
+  /* ── MEDIA ── */
+  #media { background: #0a1520; }
+  .media-feature {
+    display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center;
+    padding: 3.5rem 3rem; border: 1px solid var(--border);
+    background: var(--card-bg);
+  }
+  .media-logo-area { text-align: center; }
+  .media-pub-name {
+    font-family: 'Cormorant Garamond', serif; font-size: 2.8rem;
+    font-weight: 300; font-style: italic; color: var(--gold-light); line-height: 1;
+  }
+  .media-pub-lang { font-size: 0.68rem; letter-spacing: 0.2em; color: var(--text-muted); text-transform: uppercase; margin-top: 0.5rem; }
+  .media-content h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400;
+    color: var(--white); margin-bottom: 1rem;
+  }
+  .media-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; }
+  .media-badge {
+    display: inline-block; margin-top: 1.5rem;
+    padding: 0.4rem 1rem; border: 1px solid var(--gold);
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--navy); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+  .contact-detail {
+    display: flex; align-items: flex-start; gap: 1rem; padding: 1.2rem 1.5rem;
+    border-left: 2px solid var(--gold);
+  }
+  .contact-detail-icon { color: var(--gold); font-size: 1rem; margin-top: 0.15rem; }
+  .contact-detail-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.2rem; }
+  .contact-detail-value { font-size: 0.95rem; color: var(--cream); }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+  .form-group input,
+  .form-group textarea {
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    color: var(--cream); padding: 0.9rem 1.2rem; font-family: 'Jost', sans-serif;
+    font-size: 0.9rem; font-weight: 300; outline: none; resize: none;
+    transition: border-color 0.25s;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus { border-color: rgba(184,151,46,0.5); }
+  .form-group textarea { min-height: 120px; }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2.5rem 4rem;
+    background: #060e16;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-name {
+    font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400;
+    color: var(--text-muted); letter-spacing: 0.05em;
+  }
+  .footer-copy { font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.1em; }
+  .footer-gold { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeLeft {
+    from { opacity: 0; transform: translateX(20px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    nav.open .nav-links {
+      display: flex; flex-direction: column; gap: 1.5rem;
+      position: fixed; top: 0; right: 0; bottom: 0; width: 70vw;
+      background: var(--charcoal); padding: 5rem 2rem; z-index: 200;
+    }
+    section { padding: 5rem 1.5rem; }
+    #hero { padding: 7rem 1.5rem 10rem; }
+    .hero-stats { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .stats-row { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .media-feature { grid-template-columns: 1fr; gap: 2rem; }
+    footer { flex-direction: column; gap: 0.8rem; text-align: center; }
+    .award-display { flex-direction: column; gap: 2rem; padding: 2.5rem; }
+    .books-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  }
+  @media (max-width: 560px) {
+    h1.hero-name { font-size: 2.8rem; }
+    .exp-counter { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-brand">Prof. M. A. Malik</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#books">Books</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-particles" id="particles"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Government Degree College, Chevella &middot; Telangana</p>
+    <h1 class="hero-name">Prof. Mohammad<br/><em>Abdul Malik</em></h1>
+    <p class="hero-title">Professor of Economics</p>
+    <p class="hero-tagline">
+      Economist <span>|</span> Researcher <span>|</span> Author <span>|</span> Educator
+    </p>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">
+      A distinguished academic with 24 years of experience shaping economic thought across Telangana—through teaching, scholarship, and public discourse.
+    </p>
+    <div class="hero-ctas">
+      <a href="#research" class="btn-primary">View Research</a>
+      <a href="#contact" class="btn-outline">Contact</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">63</div>
+      <div class="stat-label">Publications</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">27</div>
+      <div class="stat-label">Books</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <p class="section-label reveal">About</p>
+    <h2 class="section-title reveal">Scholar. Teacher.<br/>Public Intellectual.</h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          A committed economist and prolific scholar, Prof. Malik has spent over two decades at the intersection of academic rigour and real-world policy—teaching undergraduate, postgraduate, and intermediate students, and writing for wider public audiences.
+        </p>
+        <p>
+          Rooted in Osmania University's intellectual tradition, his research spans agricultural economics, inclusive development, minority empowerment, and Telangana's regional political economy. His column in Andhra Jyothi—running for 24 years—brings economic analysis to Telugu-speaking communities across the state.
+        </p>
+        <p>
+          Beyond the classroom, he serves as a community organiser and civic leader, founding several educational and social advocacy organisations.
+        </p>
+        <div class="exp-counter" style="margin-top:2.5rem;">
+          <div class="counter-card">
+            <span class="counter-num">24</span>
+            <span class="counter-desc">Total Years</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num">22</span>
+            <span class="counter-desc">Years Teaching</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num">20+</span>
+            <span class="counter-desc">Invited Lectures</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num">30</span>
+            <span class="counter-desc">Conf. Papers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="qual-grid">
+          <div class="qual-item">
+            <div class="qual-icon">◈</div>
+            <div>
+              <div class="qual-title">Ph.D. (Economics)</div>
+              <div class="qual-detail">Osmania University, 2008</div>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-icon">◈</div>
+            <div>
+              <div class="qual-title">M.A. Economics</div>
+              <div class="qual-detail">Osmania University, 1999</div>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-icon">◈</div>
+            <div>
+              <div class="qual-title">LL.B</div>
+              <div class="qual-detail">Osmania University, 2002</div>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-icon">◈</div>
+            <div>
+              <div class="qual-title">NET &amp; SET Qualified</div>
+              <div class="qual-detail">National &amp; State Eligibility Tests – Economics</div>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-icon">◈</div>
+            <div>
+              <div class="qual-title">B.A.</div>
+              <div class="qual-detail">1997</div>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-icon">◈</div>
+            <div>
+              <div class="qual-title">Minor Research Project</div>
+              <div class="qual-detail">MGNREGS Study – Completed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <p class="section-label reveal">Career</p>
+    <h2 class="section-title reveal">Experience &amp;<br/>Responsibilities</h2>
+    <p class="section-sub reveal">A career spanning teaching, administration, research, and community coordination.</p>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2001 – Present · 24 Years</div>
+        <div class="timeline-role">Professor of Economics</div>
+        <div class="timeline-org">Government Degree College, Chevella, Telangana — Collegiate Education Dept.</div>
+        <div class="timeline-desc">Teaching Economics at undergraduate, postgraduate, and intermediate levels. Authored course material for Telugu Akademi and Dr. B.R. Ambedkar Open University. Active participant in state and national academic conferences.</div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-year">Administrative Role</div>
+        <div class="timeline-role">NAAC &amp; IQAC Coordinator</div>
+        <div class="timeline-org">Government Degree College, Chevella</div>
+        <div class="timeline-desc">Led institutional quality assurance processes, coordinating NAAC accreditation and Internal Quality Assurance Cell activities.</div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-year">Administrative Role</div>
+        <div class="timeline-role">Academic Coordinator</div>
+        <div class="timeline-org">Government Degree College, Chevella</div>
+        <div class="timeline-desc">Oversaw academic planning, curriculum coordination, and faculty development initiatives across departments.</div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-3">
+        <div class="timeline-year">Social Service Role</div>
+        <div class="timeline-role">NSS Programme Officer</div>
+        <div class="timeline-org">Government Degree College</div>
+        <div class="timeline-desc">Directed the National Service Scheme unit, organising community outreach, student volunteering, and social awareness campaigns.</div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-4">
+        <div class="timeline-year">Government Service</div>
+        <div class="timeline-role">Assistant Commercial Tax Officer</div>
+        <div class="timeline-org">Government of Andhra Pradesh / Telangana</div>
+        <div class="timeline-desc">Served in revenue administration prior to full-time academic appointment.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="section-inner">
+    <p class="section-label reveal">Scholarship</p>
+    <h2 class="section-title reveal">Research &amp;<br/>Publications</h2>
+    <p class="section-sub reveal">Spanning inclusive development, minority empowerment, agricultural economics, and Telangana's regional economy.</p>
+
+    <div class="stats-row">
+      <div class="stat-card reveal">
+        <span class="big-num">63</span>
+        <span class="stat-label">Total Publications</span>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <span class="big-num">30</span>
+        <span class="stat-label">Conference Papers</span>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <span class="big-num">27</span>
+        <span class="stat-label">Books Authored / Edited</span>
+      </div>
+    </div>
+
+    <div class="papers-list reveal">
+      <div class="paper-item">
+        <div class="paper-title">Ideas of Marx, Phule and Ambedkar in View of the Agony of Working Class: A Reflection on Migrant Labour Crisis in India During Pandemic</div>
+        <div class="paper-meta">
+          <div class="paper-year">2025</div>
+          <a href="http://www.ijcrt.org/papers/IJCRT2509110.pdf" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">The Critical Appraisal of Peaceful and Inclusive Societies for Sustainable Development in India</div>
+        <div class="paper-meta">
+          <div class="paper-year">2025</div>
+          <a href="https://drive.google.com/file/d/1g8d0nmTQymgHzpHkBoyeW-1uSb1BZxiS/view" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">Employment Growth Potentialities in IT Sector in Telangana</div>
+        <div class="paper-meta">
+          <div class="paper-year">2025</div>
+          <a href="https://ijnrd.org/viewpaperforall.php?paper=IJNRD2508112" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">Inclusive Digital Growth in India: A Critical Appraisal</div>
+        <div class="paper-meta">
+          <div class="paper-year">2026</div>
+          <a href="http://www.ijrar.org/papers/IJRAR1EJP032" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">COVID-19: It's Genesis, Spread and Prevention – A Critical Appraisal</div>
+        <div class="paper-meta">
+          <div class="paper-year">2024</div>
+          <a href="https://ijnrd.org/papers/IJNRD2412012.pdf" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">Emerging Trends in Agriculture</div>
+        <div class="paper-meta">
+          <div class="paper-year">2024</div>
+          <a href="https://ijnrd.org/viewpaperforall.php?paper=IJNRD2405054" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">Efforts for Social Inclusion During India's Development Process: A Critical Appraisal</div>
+        <div class="paper-meta">
+          <div class="paper-year">2023</div>
+          <a href="https://www.ijnrd.org/viewpaperforall.php?paper=IJNRD2305745" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">Impact of Globalization on India's Agriculture Exports</div>
+        <div class="paper-meta">
+          <div class="paper-year">2020</div>
+          <a href="https://www.srjis.com/I_Special_Issue" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">Empowerment Dynamics: The Status of Muslim Population in Telangana State</div>
+        <div class="paper-meta">
+          <div class="paper-year">2018</div>
+          <a href="http://www.ijcrt.org/papers/IJCRT1705110" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">Inclusiveness of India's Muslim Minorities in India's Economic Growth Process</div>
+        <div class="paper-meta">
+          <div class="paper-year">2018</div>
+          <a href="https://journals.pen2print.org/index.php/ijr/article/download/11896/11227" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">India's Economic Reforms and Its Impact on Unemployment Poverty and Income Inequalities in India</div>
+        <div class="paper-meta">
+          <div class="paper-year">2017</div>
+          <a href="http://ijar.org.in/stuff/issues/v4-i1(6)/v4-i1(6).pdf" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-title">Social Inclusiveness and Exclusiveness in Telangana Industrial Policy</div>
+        <div class="paper-meta">
+          <div class="paper-year">2018</div>
+          <a href="http://www.ijcrt.org/papers/IJCRT1801529" target="_blank" class="paper-link">View ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section id="books">
+  <div class="section-inner">
+    <p class="section-label reveal">Authored Works</p>
+    <h2 class="section-title reveal">Books &amp;<br/>Chapters</h2>
+    <p class="section-sub reveal">27 books and contributed chapters spanning economics education, Telangana's regional economy, and inclusive development.</p>
+
+    <div class="books-grid reveal">
+      <div class="book-card">
+        <div class="book-num">01</div>
+        <div class="book-title">Economics and Indian Economy</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">2019</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">02</div>
+        <div class="book-title">India's Economic Development</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">2018</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">03</div>
+        <div class="book-title">Indian Economy for I and II</div>
+        <div class="book-pub">Vaagdevi Publishers, Hyderabad</div>
+        <div class="book-year">2024</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">04</div>
+        <div class="book-title">Telangana Economy</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">2015</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">05</div>
+        <div class="book-title">Telangana Economy for Group-II</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">06</div>
+        <div class="book-title">Economics for NET &amp; SET / JL / DL</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">2014</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">07</div>
+        <div class="book-title">A.P. Economy (Erstwhile) for Group-II</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">08</div>
+        <div class="book-title">Terminology of Economics</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">2019</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">09</div>
+        <div class="book-title">Economics for PG Entrance</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">10</div>
+        <div class="book-title">Economics for Group-II</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">11</div>
+        <div class="book-title">Economic Development of India (Two Chapters – Inter II, EM)</div>
+        <div class="book-pub">Telugu Akademi, Hyderabad</div>
+        <div class="book-year">2020</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">12</div>
+        <div class="book-title">Economic Development of India (Two Chapters – Inter II, TM)</div>
+        <div class="book-pub">Telugu Akademi, Hyderabad</div>
+        <div class="book-year">2020</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">13</div>
+        <div class="book-title">Development Economics and Infrastructure (Two Chapters)</div>
+        <div class="book-pub">Dr. B.R. Ambedkar Open University, Hyderabad</div>
+        <div class="book-year">2020</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">14</div>
+        <div class="book-title">Telangana Economy (Two Chapters)</div>
+        <div class="book-pub">Dr. B.R. Ambedkar Open University, Hyderabad</div>
+        <div class="book-year">2020</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">15</div>
+        <div class="book-title">A.P. Economy</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">2018</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">16</div>
+        <div class="book-title">Economics and Indian Economy for Group I &amp; II</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">17</div>
+        <div class="book-title">Economic Reforms in India</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">18</div>
+        <div class="book-title">Macro Economics</div>
+        <div class="book-pub">Nalgonda Economic Forum</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">19</div>
+        <div class="book-title">Struggle for Telangana: The Role of Muslim Intellectual Forum</div>
+        <div class="book-pub">—</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">20</div>
+        <div class="book-title">The Process of Inclusive Development in India: A Critical Appraisal</div>
+        <div class="book-pub">Vaagdevi Publishers</div>
+        <div class="book-year">2025</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">21</div>
+        <div class="book-title">Arthasastram</div>
+        <div class="book-pub">—</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">22</div>
+        <div class="book-title">Bharathadesha Arthikabhivruddi</div>
+        <div class="book-pub">—</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">23</div>
+        <div class="book-title">The Impact of MGNREGS on Rural Development (Editor, Seminar Proceedings)</div>
+        <div class="book-pub">Siri Publishers, Hyderabad</div>
+        <div class="book-year">2013</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">24</div>
+        <div class="book-title">The Impact of MGNREGS on Rural Development (Project Work)</div>
+        <div class="book-pub">Siri Publishers, Hyderabad</div>
+        <div class="book-year">2014</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">25</div>
+        <div class="book-title">A.P. Economy for Group-II</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">26</div>
+        <div class="book-title">Telangana Economy for Group-II (Second Edition)</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">—</div>
+      </div>
+      <div class="book-card">
+        <div class="book-num">27</div>
+        <div class="book-title">Economy of A.P.</div>
+        <div class="book-pub">R.C. Reddy Publications, Hyderabad</div>
+        <div class="book-year">2018</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="section-inner">
+    <p class="section-label reveal">Recognition</p>
+    <h2 class="section-title reveal">Awards &amp;<br/>Honours</h2>
+
+    <div class="award-display reveal">
+      <div class="award-icon">★</div>
+      <div class="award-body">
+        <div class="award-year">Academic Year 2015–16</div>
+        <h3>Best Teacher Award</h3>
+        <p>Conferred by the Government of Telangana in recognition of distinguished service, dedication to students, and sustained excellence in teaching Economics at the collegiate level.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social">
+  <div class="section-inner">
+    <p class="section-label reveal">Community</p>
+    <h2 class="section-title reveal">Social<br/>Contributions</h2>
+    <p class="section-sub reveal">Bridging scholarship with civic responsibility through leadership in educational and social organisations.</p>
+
+    <div class="social-grid">
+      <div class="social-card reveal">
+        <div class="social-role">Founder Adviser</div>
+        <div class="social-org">Sathya Shodhak Educational Society</div>
+      </div>
+      <div class="social-card reveal reveal-delay-2">
+        <div class="social-role">President</div>
+        <div class="social-org">PAAS<br/>(Progressive Academic &amp; Social Society)</div>
+      </div>
+      <div class="social-card reveal reveal-delay-3">
+        <div class="social-role">Founder President</div>
+        <div class="social-org">Telangana Muslim Intellectuals Forum</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section id="media">
+  <div class="section-inner">
+    <p class="section-label reveal">Media &amp; Writing</p>
+    <h2 class="section-title reveal">Articles &amp;<br/>Public Discourse</h2>
+
+    <div class="media-feature reveal">
+      <div class="media-logo-area">
+        <div class="media-pub-name">Andhra<br/>Jyothi</div>
+        <div class="media-pub-lang">Telugu Daily</div>
+      </div>
+      <div class="media-content">
+        <h3>Economics for the Public: A 24-Year Column</h3>
+        <p>
+          For over two decades, Prof. Malik has contributed regular columns on Economics to Andhra Jyothi—one of Telugu's most widely read daily newspapers. His writing demystifies complex economic policy, explains the impact of national schemes on Telangana's communities, and brings academic analysis to general readership.
+        </p>
+        <p>
+          This sustained commitment to public scholarship reflects a belief that economics should not remain confined to the lecture hall—it should inform, empower, and engage citizens in the democratic conversation about their economic futures.
+        </p>
+        <span class="media-badge">24 Years of Contribution</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-label reveal">Get in Touch</p>
+    <h2 class="section-title reveal">Contact</h2>
+    <p class="section-sub reveal">For academic collaboration, speaking invitations, or media enquiries.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉</div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-value">drmalik73@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">☏</div>
+          <div>
+            <div class="contact-detail-label">Mobile</div>
+            <div class="contact-detail-value">+91 98495 85332</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">◎</div>
+          <div>
+            <div class="contact-detail-label">Institution</div>
+            <div class="contact-detail-value">Govt. Degree College, Chevella<br/>Telangana</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">⌂</div>
+          <div>
+            <div class="contact-detail-label">Residence</div>
+            <div class="contact-detail-value">Flat No. 103, Grace Signature<br/>Upperpalli, Hyderabad – 500048</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal-delay-2">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Full name" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="Reason for contact" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Your message…"></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;border:none;cursor:pointer;">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Prof. Mohammad Abdul Malik &nbsp;<span class="footer-gold">·</span>&nbsp; Professor of Economics</div>
+  <div class="footer-copy">&copy; 2025 &nbsp;<span class="footer-gold">◈</span>&nbsp; All rights reserved</div>
+</footer>
+
+<script>
+  // Particles
+  (function() {
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 3 + 1;
+      p.style.cssText = `
+        width:${size}px; height:${size}px;
+        left:${Math.random()*100}%;
+        animation-duration:${Math.random()*15+12}s;
+        animation-delay:${Math.random()*10}s;
+        opacity:0;
+      `;
+      container.appendChild(p);
+    }
+  })();
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // Nav toggle mobile
+  function toggleNav() {
+    document.getElementById('navbar').classList.toggle('open');
+  }
+
+  // Close nav on link click
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('navbar').classList.remove('open');
+    });
+  });
+
+  // Active nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 200) current = s.id;
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.style.color = a.getAttribute('href') === '#'+current
+        ? 'var(--gold-light)' : '';
+    });
+  }, { passive: true });
+</script>
+</body>
+</html>
