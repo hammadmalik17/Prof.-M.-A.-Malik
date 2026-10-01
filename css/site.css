@@ -1,0 +1,71 @@
+/* additions on top of base.css */
+#progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-pale));z-index:300}
+:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+.hamburger{background:none;border:0;padding:6px}
+.nav-links a.active{color:var(--gold-light)}
+a{color:inherit}
+.mini-head{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.35rem;color:var(--white);margin:2.2rem 0 1rem}
+.about-grid .mini-head:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.tag{font-size:.78rem;padding:.3rem .8rem;border:1px solid var(--border);color:var(--gold-pale);border-radius:99px}
+#themes{margin:2rem 0 0}
+.yr{color:var(--gold);font-size:.8rem;margin-left:.5rem}
+.details>div{display:grid;grid-template-columns:100px 1fr;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--border)}
+.details dt{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted)}
+.details dd{font-size:.92rem}
+.stats-row{margin-bottom:3rem}
+/* toolbar + chips */
+.toolbar{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-bottom:1rem}
+.toolbar input,.toolbar select{background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--cream);padding:.65rem 1rem;font:inherit;font-size:.88rem;min-width:220px;border-radius:2px}
+.toolbar input{flex:1}.toolbar select option{background:var(--navy)}
+.chip{font:inherit;font-size:.8rem;padding:.45rem 1rem;background:transparent;color:var(--text-muted);border:1px solid var(--border);border-radius:99px;cursor:pointer;transition:.2s}
+.chip:hover{color:var(--gold-light);border-color:rgba(184,151,46,.5)}
+.chip.on{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.result-count{font-size:.78rem;color:var(--text-muted);margin:.5rem 0 1rem}
+.link-btn{background:none;border:0;color:var(--gold-light);font:inherit;cursor:pointer;text-decoration:underline}
+.empty{padding:3rem;text-align:center;color:var(--text-muted);border:1px dashed var(--border)}
+/* year chart */
+.year-chart{border:1px solid var(--border);background:var(--card-bg);padding:1.5rem 1.5rem 1rem;margin-bottom:2rem}
+.yc-head{display:flex;justify-content:space-between;font-size:.78rem;color:var(--text-muted);margin-bottom:1rem}
+.yc-bars{display:flex;align-items:flex-end;gap:.5rem;height:150px;overflow-x:auto}
+.yc-bar{flex:1;min-width:34px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:.3rem;background:none;border:0;cursor:pointer;color:var(--text-muted);font:inherit}
+.yc-fill{width:100%;background:rgba(184,151,46,.35);transition:background .2s,transform .2s;border-radius:2px 2px 0 0}
+.yc-bar:hover .yc-fill{background:var(--gold)}
+.yc-bar.on .yc-fill{background:var(--gold-light)}
+.yc-n{font-size:.72rem;color:var(--gold-pale)}.yc-y{font-size:.68rem}
+/* paper accordion */
+.paper-item{display:flex;align-items:flex-start;gap:1rem}
+.paper-kind{font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.paper-main{flex:1}
+.paper-detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.paper-detail>*{overflow:hidden;min-height:0}
+.paper-item.open .paper-detail{grid-template-rows:1fr;margin-top:.8rem}
+.paper-detail p{font-size:.82rem;color:var(--text-muted);margin-bottom:.6rem}
+.paper-detail .paper-link{color:var(--gold-light);width:max-content}
+.paper-item.open{background:rgba(184,151,46,.06);border-color:rgba(184,151,46,.35)}
+.caret{color:var(--gold);font-size:1.2rem;line-height:1;transition:transform .25s}
+.paper-item.open .caret{transform:rotate(45deg)}
+.muted{font-style:italic}
+/* conferences */
+.conf-year{display:grid;grid-template-columns:90px 1fr;gap:1.5rem;margin-bottom:1.5rem;padding-top:1.2rem;border-top:1px solid var(--border)}
+.conf-year>h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:2.2rem;color:var(--gold-light);line-height:1}
+.conf-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem}
+.conf{padding:1.3rem 1.5rem;border:1px solid var(--border);background:var(--card-bg);transition:border-color .25s}
+.conf:hover{border-color:rgba(184,151,46,.4)}
+.conf-top{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.7rem}
+.badge{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .6rem;border:1px solid var(--border);color:var(--text-muted)}
+.badge.lvl-International{border-color:var(--gold);color:var(--gold-light)}
+.badge.lvl-State{color:var(--cream)}
+.conf h4{font-weight:400;font-size:.95rem;color:var(--cream);line-height:1.5;margin-bottom:.5rem}
+.conf-event{font-size:.82rem;color:var(--text-muted);margin-bottom:.4rem}
+.conf-where{font-size:.76rem;color:var(--gold)}
+/* books */
+.book-title{font-size:.92rem}.book-num{color:rgba(184,151,46,.3)}
+.book-year{margin-top:.7rem}
+/* misc */
+.contact-detail-value a{text-decoration:none;border-bottom:1px solid var(--border)}
+.contact-info .btn-outline{align-self:flex-start;background:none;font-family:inherit}
+.form-note{font-size:.76rem;color:var(--text-muted)}
+.award-display{margin-bottom:0}
+@media(max-width:900px){.conf-year{grid-template-columns:1fr;gap:.6rem}.conf-items{grid-template-columns:1fr}.toolbar input{min-width:100%}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.hero-eyebrow,.hero-name,.hero-title,.hero-tagline,.hero-divider,.hero-desc,.hero-ctas,.hero-stats,.scroll-indicator{opacity:1}}
